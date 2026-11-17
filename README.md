@@ -51,28 +51,38 @@ Evaluated model performance using classification metrics and confusion matrices,
 
 ## 5. Dataset and Reproducibility
 
-**Dataset:** [UCI Default of Credit Card Clients - Kaggle copy](https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset)
+**Dataset:** [UCI Default of Credit Card Clients — Kaggle copy](https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset)
 
 The dataset contains 30,000 customers and 23 input features. We used a stratified 70/15/15 train-validation-test split with `random_state=42`.
 
-To reproduce the analysis:
+### Reproducing the ML analysis
+
+The notebook was developed using **Kaggle Notebooks** and contains Kaggle-specific input and output paths.
+
+1. Download `es335-project-notebook.ipynb` from this repository and import it into Kaggle.
+2. Add the linked credit card dataset through Kaggle's **Add Input** option.
+3. Run all notebook cells in order.
+4. The notebook generates the model results and exports the supporting files to `/kaggle/working/project_exports/`.
+
+The notebook's saved outputs and exported results are also included in the repository for verification.
+
+### Running locally
+
+Clone the repository and install the dependencies:
 
 ```bash
 git clone https://github.com/adarasandiashwika/credit-card-default-rf
 cd credit-card-default-rf
 pip install -r requirements.txt
-jupyter notebook es335-project-notebook.ipynb
 ```
 
-Download `UCI_Credit_Card.csv`, update the dataset path in the notebook if needed, and run all cells.
+The notebook can also be opened locally, but its Kaggle-specific dataset and export paths must be adjusted before running it.
 
 To view the website locally:
 
 ```bash
 python -m http.server 5500
 ```
-
-Open `http://localhost:5500` in your browser.
 
 ## 6. References
 
